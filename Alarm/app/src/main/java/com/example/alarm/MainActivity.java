@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabaseLockedException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -56,12 +57,14 @@ public class MainActivity extends AppCompatActivity {
         AlarmListAdapter adapter=new AlarmListAdapter(MainActivity.this,R.layout.activity_list_view,alarmList);
         ListView listView=(ListView)findViewById(R.id.list_view);
 
+
         listView.setAdapter(adapter);
         if (cursor.moveToFirst()){
             do {
                String event=cursor.getString(cursor.getColumnIndex("event"));
                int time=cursor.getInt(cursor.getColumnIndex("total_time"));
-                AlarmList list=new AlarmList(event,time);
+                int id=cursor.getInt(cursor.getColumnIndex("id"));
+                AlarmList list=new AlarmList(id,event,time);
                 alarmList.add(list);
             }while (cursor.moveToNext());
         }

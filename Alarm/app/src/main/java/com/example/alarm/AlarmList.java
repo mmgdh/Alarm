@@ -5,11 +5,17 @@ package com.example.alarm;
  */
 
 public class AlarmList {
+    private int id;
     private String event;
     private int time;
-    public AlarmList(String event,int time){
+    public AlarmList(int id,String event,int time){
+        this.id=id;
         this.event=event;
         this.time=time;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public String getEvent() {

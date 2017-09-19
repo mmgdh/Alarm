@@ -3,23 +3,28 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="事件"
         android:id="@+id/txt_list_event"/>
     <SeekBar
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/seekBar_list_time"
+        android:layout_weight="3"
         android:layout_gravity="left"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="百分比"
+        android:layout_weight="1"
         android:id="@+id/txt_list_percent"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="删除"
         android:id="@+id/btn_list_Delete"/>
 
 </LinearLayout>
