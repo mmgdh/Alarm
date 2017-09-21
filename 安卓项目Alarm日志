@@ -1,1 +1,6 @@
 安卓项目Alarm记录
+2017年9月21日19:23:28
+   今天修改了listview里的删除方法，将在AlarmListAdapter里的删除button点击事件删除，因为这种写法很耗资源，而且原本这么写的理由是不知道如何在
+mainactivity里面获取listview所要删除的数据，而且不知道为什么listview的点击事件无效，今天发现可以直接用listview的点击事件获取位置position，并用
+实体类的getid获得，至于为什么listview点击事件无效是因为在listview的建立时我放了一个button，这个button会夺取listview的点击事件，我们需要在button的
+属性里设置android:focusable="false"，这样就不会影响到listview的点击事件了。
